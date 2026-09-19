@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Statistics</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 60px auto;
+    background: rgba(255,255,255,0.08);
+    padding: 40px;
+    border-radius: 18px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #00C6FF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.chart-box {
+    margin: 30px 0;
+    background: rgba(255,255,255,0.12);
+    padding: 25px;
+    border-radius: 15px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<a href="/dashboard" class="back">⬅ Back to Dashboard</a>
+
+<h1 style="text-align:center;">Model Statistics & Analysis</h1>
+
+<div class="chart-box">
+<canvas id="chart1"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="chart2"></canvas>
+</div>
+
+<script>
+new Chart(chart1, {
+    type: 'pie',
+    data: {
+        labels: ['Fake','Genuine'],
+        datasets: [{ data:[45,55], backgroundColor:['#ff4d4d','#4CAF50'] }]
+    }
+});
+
+new Chart(chart2, {
+    type: 'bar',
+    data: {
+        labels:['Followers','Following','Posts','Bio','Profile Pic'],
+        datasets:[{ data:[85,70,60,65,90], backgroundColor:'#00C6FF' }]
+    }
+});
+</script>
+
+</div>
+</body>
+</html>

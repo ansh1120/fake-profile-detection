@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Check Profile</title>
+<style>
+body {
+    background: #eef2f3;
+    font-family: Arial;
+}
+
+.container {
+    width: 50%;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg,#28a745,#20c997);
+    border: none;
+    color: white;
+    border-radius: 25px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #007BFF;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<a href="/dashboard" class="back">⬅ Back to Dashboard</a>
+
+<h2>Enter Profile Details</h2>
+
+<form method="POST">
+<input name="followers" placeholder="Followers" required>
+<input name="following" placeholder="Following" required>
+<input name="posts" placeholder="Posts" required>
+<input name="bio_length" placeholder="Bio Length" required>
+<input name="profile_pic" placeholder="Profile Pic (1 or 0)" required>
+<button type="submit">Analyze Profile</button>
+</form>
+
+</div>
+</body>
+</html>
